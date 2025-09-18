@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="icon" href="./img/favi.jpg">
+  <link rel="stylesheet" href="./cart.css">
+  <script src="./cart.js"async></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Fashion On.</div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="nav-links" id="nav-links">
+      <a href="./home.html">HOME</a>
+      <a href="./about.html">ABOUT</a>
+       <a href="#" class="logout">LOGOUT</a>
+      <div class="icons mobile-icons" style="display:flex; gap: 15px; margin-left: 20px;">
+        <i class="fas fa-search" style="color:#fff; cursor:pointer;"></i>
+        <i class="fas fa-user" style="color:#fff; cursor:pointer;"></i>
+        <div class="cart-icon" id="cart-icon" style="position: relative; cursor:pointer; font-size: 19px;">
+          <i class="fas fa-shopping-cart" style="color:#fff"></i>
+          <span class="cart-badge" id="cart-count">0</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header><i class="fas fa-shopping-cart"></i> My Shopping Cart</header>
+
+  <main id="cartContainer">
+
+  </main>
+
+  <div class="cart-footer">
+    <div>Total Amount: <span style="color: #ff0066;">₹</span><span id="totalCost" style="color: #ff0066;">0.00</span></div>
+    <button class="buy-now-btn" id="buyNowBtn">Buy Now</button>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h2 class="footer-logo" style="color: #e32879;">Fashion on<span>.</span></h2>
+        <p>Address: 60-49 Road 11378 New York</p>
+        <p>Phone: +65 11.188.888</p>
+        <p>Email: Fashionon@gmail.com</p>
+        <div class="footer-socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Join The Newsletter</h3>
+        <p>Get E-mail updates about our latest shop and special offers.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your mail" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Copyright ©2025 All rights reserved | This template is made with <span>♥</span> by Kabileswaran</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./dashboard.css" />
+  <script src="./dashboard.js" defer></script>
+</head>
+<body>
+  <header>
+    <span>Dashboard</span>
+    <button id="menuToggle" aria-label="Toggle Menu">☰</button>
+  </header>
+
+  <aside>
+    <ul>
+      <li><a href="#" class="dashboardLink">Dashboard</a></li>
+      <li><a href="#" class="CustomerDisplay">Customer</a></li>
+      <li><a href="#" class="productslink">Products</a></li>
+      <li><a href="#" class="logout">Logout</a></li>
+    </ul>
+  </aside>
+
+  <main>
+    <section id="customerTable">
+      <h2 style="color: #e32879;">Customer details</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>User Name</th>
+            <th>Email</th>
+            <!-- <th>Password</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr><!-- Data will be inserted dynamically --></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="products">
+      <div class="wholeform">
+        <form action="" class="form">
+          <!-- Hidden input for product index -->
+          <input type="hidden" class="pindex" value="">
+
+          <section>
+            <label for="">Enter image Url</label>
+            <input type="url" class="pimg" />
+             <span id="pimgerror" class="redcolor"></span>
+          </section>
+          <section>
+            <label for="">Product Name</label>
+            <input type="text" class="productname" />
+             <span id="productnameerror" class="redcolor"></span>
+          </section>
+          <section>
+            <label for="">Price</label>
+            <input type="number" class="ogprice" />
+             <span id="ogpriceerror" class="redcolor"></span>
+          </section>
+          <section class="but">
+            <button type="reset">Reset</button>
+            <button type="submit" class="smtbtn">Submit</button>
+            <button type="submit" class="uptbtn">Update</button>
+          </section>
+        </form>
+      </div><br>
+
+      <table>
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>product image</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr><!-- content to be added --></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="dashboardcontent">
+      <h1>Welcome to Dashboard</h1>
+      <div class="cards">
+        <div class="card">
+          <h2 id="totalCustomers">0</h2>
+          <p>Total Customers</p>
+        </div>
+        <div class="card">
+          <h2 id="totalProducts">0</h2>
+          <p>Total Products</p>
+        </div>
+        <div class="card">
+          <h2>12</h2>
+          <p>Already available products</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-bottom">
+      <p>
+        Copyright ©2025 All rights reserved | This template is made with
+        <span>♥</span> by Kabileswaran
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

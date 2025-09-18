@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="stylesheet" href="./about.css">
+    <link rel="icon" href="./img/favi.jpg">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css"
+    integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo" style="color: #ff0066; font-size: 25px;">Fashion On.</div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="nav-links" id="nav-links">
+      <a href="./home.html">HOME</a>
+      <a href="./about.html">ABOUT</a>
+       <a href="#" class="logout">LOGOUT</a>
+
+      <div class="icons mobile-icons">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-user"></i>
+        <!-- <div class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" style="color: #ff0066;">0</span>
+        </div> -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="./img/m1.jpg" alt="Girl with hat">
+      </div>
+      <div class="about-content">
+        <h5>ABOUT US</h5>
+        <h1 style="color:#fff;">About Story</h1>
+        <p>
+          We believe that every person has a unique story to tell. Through creativity, dedication, and passion, we help bring these stories to life.
+        </p>
+        <p>
+          Our journey began with a vision to inspire and connect people around the world. Whether it's through images, words, or ideas — storytelling is at the heart of everything we do.
+        </p>
+      </div>
+    </div>
+  </section><br>
+
+  <!-- Experience Section -->
+  <section class="experience-section" style="background-color: #1e1e1e;">
+    <div class="experience-container">
+      <div class="experience-left">
+        <h5 class="subtitle">NUMBER SPEAKS</h5>
+        <h2 class="main-title">We have a lot of experience</h2>
+        <a href="#" class="read-more-btn">Read More</a>
+      </div>
+
+      <div class="experience-right">
+        <div class="experience-box">
+          <h3 class="number">2034</h3>
+          <div>
+            <h4 class="title">Successful projects</h4>
+            <p class="desc">Since its establishment in 2005, Fashion has been focusing on project management & implementation through cooperation.</p>
+          </div>
+        </div>
+
+        <div class="experience-box">
+          <h3 class="number">1054</h3>
+          <div>
+            <h4 class="title">Events</h4>
+            <p class="desc">Since its establishment in 2005, Fashion has been focusing on project management & implementation through cooperation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h2 class="footer-logo" style="color: #e32879;">Fashion on<span>.</span></h2>
+        <p>Address: 60-49 Road 11378 New York</p>
+        <p>Phone: +65 11.188.888</p>
+        <p>Email: Fashionon@gmail.com</p>
+        <div class="footer-socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Join The Newsletter</h3>
+        <p>Get E-mail updates about our latest shop and special offers.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your mail" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Copyright ©2025 All rights reserved | This template is made with <span>♥</span> by Kabileswaran</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.getElementById('menu-toggle');
+      const navLinks = document.getElementById('nav-links');
+
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show'); 
+        menuToggle.classList.toggle('active');
+      });
+    });
+
+    
+let lgbtn = document.querySelector(".logout")
+lgbtn.addEventListener("click",()=>{
+  let logoutCheck = confirm("Do you want to logout ?")
+  setTimeout(()=>{
+     if(logoutCheck == 1){
+    window.location.href = "index.html"
+  }
+  },1000)
+  
+})
+
+  </script>
+</body>
+</html>

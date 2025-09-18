@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 50px auto 50px;
+  grid-template-areas:
+    "h h"
+    "s m"
+    "f f";
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+header {
+  background: #1e1e1e;
+  color: #e32879;
+  grid-area: h;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  font-size: 18px;
+  position: relative;
+}
+#menuToggle {
+  background: none;
+  border: none;
+  color: #e32879;
+  font-size: 26px;
+  cursor: pointer;
+  display: none;
+  margin-left: auto;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+aside {
+  grid-area: s;
+  background-color: #222;
+  color: white;
+  padding: 10px;
+}
+aside ul {
+  list-style: none;
+}
+aside ul li {
+  margin: 8px 0;
+}
+aside ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 10px;
+  display: block;
+  background: #444;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+aside ul li a:hover {
+  background: #666;
+}
+
+main {
+  grid-area: m;
+  background: #444;
+  padding: 20px;
+  overflow: auto;
+}
+
+footer {
+  background: #1e1e1e;
+  grid-area: f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e32879;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+table thead {
+  background: #444;
+  color: white;
+}
+table th,
+table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+table tr td:hover {
+  background: #f1f1f1;
+}
+
+.ebtn,
+.dbtn {
+  background-color: #e32879;
+  width: 40px;
+  color: white;
+}
+
+.but {
+  display: inline-block;
+}
+
+.form section {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #e32879;
+}
+
+.form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.form button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #e32879;
+  color: white;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  background-color: #ff4c94;
+}
+
+/* Place Reset and Submit side by side */
+.form section {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Responsive for small devices */
+@media screen and (max-width: 600px) {
+  .form {
+    grid-template-columns: 1fr; /* Stack inputs in single column */
+  }
+
+  .form button {
+    width: 100%;
+  }
+
+  .form section:last-child {
+    flex-direction: column;
+  }
+}
+
+.wholeform {
+  width: 300px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  color: #ff4c94;
+  font-size: 30px;
+}
+
+.dashboardcontent h1 {
+  color: #fff;
+}
+
+.btns,
+#deletebtn {
+  text-decoration: none;
+  color: black;
+  background-color: #ff4c94;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+/* Hamburger Menu for mobile */
+@media screen and (max-width: 500px) {
+  #menuToggle {
+    display: block;
+  }
+
+  aside {
+    display: none; /* Hide sidebar initially */
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    z-index: 1000;
+    overflow: hidden;
+  }
+
+  aside.active {
+    display: block; /* Show sidebar on toggle */
+  }
+
+  aside ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  aside ul li a {
+    background-color: transparent;
+    border-bottom: 1px solid #444;
+    border-radius: 0;
+  }
+
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 1fr 50px;
+    grid-template-areas:
+      "h"
+      "s"
+      "m"
+      "f";
+  }
+
+  main {
+    padding-top: 10px;
+  }
+}
+
+.form span {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+.form{
+  border: 2px solid #fff;
+  padding: 15px 15px;
+  border-radius: 20px;
+
+}

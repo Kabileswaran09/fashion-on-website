@@ -1,0 +1,137 @@
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./img/nbg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+    font-family: sans-serif;
+    overflow-y: auto;
+}
+.all {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+.form {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    max-width: 700px; 
+    display: flex;
+    flex-direction: column;
+    padding: 25px 35px;
+    font-size: 16px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.75);
+    box-sizing: border-box;
+}
+
+.form h1 {
+    text-align: center;
+    color: white;
+    margin: 10px 0 20px 0;
+    font-size: 26px;
+}
+
+/* Labels */
+.form label {
+    color: white;
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+/* Inputs */
+.form input {
+    height: 40px;
+    border-radius: 12px;
+    padding: 7px 20px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 7px;
+}
+
+/* Error message spans */
+.form span {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+/* Submit button */
+.form button {
+    height: 50px;
+    font-size: 18px;
+    border-radius: 28px;
+    margin-top: 25px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Login text */
+p {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color:#ff4c94;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        align-items: flex-start;  
+        padding: 20px 0;          
+    }
+
+    .form {
+        max-width: 95%;
+        margin: 20px auto;        
+        padding: 20px 25px;
+    }
+
+    .form h1 {
+        font-size: 22px;
+    }
+
+    .form input {
+        font-size: 15px;
+        height: 36px;
+        padding: 6px 15px;
+    }
+
+    .form button {
+        font-size: 16px;
+        height: 45px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
